@@ -1,0 +1,33 @@
+<div class="container content" ng-controller="ArticleCtrl">
+  <div class="row slider article animated fadeIn">
+    <div class="col-md-9">
+      <h1>{{article.title}}</h1>
+      <div class="col-md-12 no-padd">
+        <img ng-src="{{article.images[0]}}" >
+      </div>
+      <div class="col-md-3 no-padd">
+        <h3 class="upper-case">Share</h3>
+        <ul class="share list-reset">
+          <li><a><i class="icon-twitter"></i> Twitter</a></li>
+          <li><a><i class="icon-facebook"></i> Facebook</a></li>
+          <li><a><i class="icon-googleplus"></i> Google</a></li>
+        </ul>
+      </div>
+      <div class="col-md-9" ng-bind-html="article.html_desc"></div>
+    </div>
+
+    <div class="col-md-3 small-preview" ng-controller="HomeCtrl">
+      <!--<h1>{{article.category}}</h1>-->
+      <div class="preview-item clearfix" ng-repeat='article in articlesList | orderBy:"title" | limitTo:"3" '>
+        <a href="#/{{article.category}}/article/{{article.id}}"></a>
+        <figure>
+          <img ng-src="{{article.images[0]}}" >
+        </figure>
+        <p>{{article.title}}</p>
+      </div>
+      <div class="ad-banner m10">
+        <a href=""><img src="img/medium-banner-300x250.jpg"></a>
+      </div>
+    </div>
+  </div>
+</div> <!-- /container -->

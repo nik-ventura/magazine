@@ -1,0 +1,34 @@
+<header class="navbar upper-case navbar-static-top bs-docs-nav " id="top" role="banner" ng-controller="ConfigCtrl">
+  <div class="container no-padd">
+    <div class="navbar-header">
+      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+      <ul class="nav navbar-nav">
+        <li>
+          <a href="#/home" ng-class="getClass('/home')">{{config.category.category1}}</a>
+        </li>
+        <li>
+          <a href="#/koti" ng-class="getClass('/koti')">{{config.category.category2}}</a>
+        </li>
+        <li>
+          <a  href="#/ruoka" ng-class="getClass('/ruoka')">{{config.category.category3}}</a>
+        </li>
+        <li>
+          <a href="#/lahjaideat" ng-class="getClass('/lahjaideat')">{{config.category.category4}}</a>
+        </li>
+        <li>
+          <a href="#/kodin" ng-class="getClass('/kodin')" >{{config.category.category5}}</a>
+        </li>
+        <li>
+          <a href="#/vapaa-aika" ng-class="getClass('/vapaa-aika')">{{config.category.category6}}</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>

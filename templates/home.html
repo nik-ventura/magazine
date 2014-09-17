@@ -1,0 +1,58 @@
+<div class="container content" >
+  <div class="row slider">
+    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol  class="carousel-indicators" ng-controller="FeaturedCtrl">
+        <li ng-repeat='article in featured | filter:sortFeatured' data-target="#carousel-example-generic" data-slide-to="{{$index}}" ng-class="{active : $first, item : true}"></li>
+      </ol>
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner" ng-controller="FeaturedCtrl">
+        <div class="item  animated fadeIn" ng-repeat='article in featured | filter:sortCategory | orderBy:"category" ' ng-class="{active : $first, item : true}" >
+          <img ng-src="{{article.featured_img[0]}}" alt=""/>
+          <div class="carousel-caption description">
+            <h1>{{article.title}}</h1>
+            <p>{{article.short_desc}}</p>
+            <ul class="social list-reset">
+              <li><a href=""><i class="icon-facebook"></i></a></li>
+              <li><a href=""><i class="icon-twitter"></i></a></li>
+              <li><a href=""><i class="icon-googleplus"></i></a></li>
+            </ul>
+            <div class="btn-block"><a class="btn btn-primary" href="#/{{article.category}}/article/{{article.id}}">Lue lisää <i class="icon-arrow-right"></i></a></div>
+          </div>
+        </div>
+
+      <!-- Controls -->
+      <a class="left carousel-control" href="" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+      </a>
+      <a class="right carousel-control" href="" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+      </a>
+    </div>
+  </div>
+    <div class="row article-preview animated fadeIn" ng-repeat='article in articlesList | orderBy:"title" | limitTo:"5" | filter:sortCategory' ng-class-odd="'right'">
+    <div class="col-md-6 article-image">
+      <img ng-src="{{article.images[0]}}" alt=""/>
+    </div>
+    <div class="col-md-6 description left" ng-class-odd="'right'">
+      <span class="category">{{article.category}}</span>
+      <h1>{{article.title }}</h1>
+      <p>{{article.short_desc }}</p>
+      <p>{{article.id}}</p>
+      <ul class="social list-reset">
+        <li><a><i class="icon-facebook"></i></a></li>
+        <li><a><i class="icon-twitter"></i></a></li>
+        <li><a><i class="icon-googleplus"></i></a></li>
+      </ul>
+      <div class="btn-block">
+        <a class="btn btn-primary" href="#/{{article.category}}/article/{{article.id}}">Read more <i class="icon-arrow-right"></i></a>
+      </div>
+
+    </div>
+  </div>
+
+</div> <!-- /container -->
+<!--<script>-->
+  <!--$( document ).ready(function() {-->
+  <!--});-->
+<!--</script>-->

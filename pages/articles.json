@@ -1,0 +1,44 @@
+
+[
+    {
+        "id":"1",
+        "category": "ruoka",
+        "title": "Maillen Dijon-sinapit somistavat ruokapöytää",
+        "short_desc": "Hovisinappina maailmalla tunnettu Maillen Dijon kasvattaa suosiotaan kokkien keitoksissa myös suomalaisessa ruokakulttuurissa. Vahva maku sopii erinomaisesti ruuanlaittoon ja kaunis lasinen purkki koristaa juhlapöytää. Rsellaisenaan.",
+        "images": [
+            "img/article-img1.jpg"
+        ] ,
+        "featured_stat":true,
+        "featured_img": [
+            "img/featured-img-1.jpg"
+        ]
+    },
+     {
+        "id":"2",
+        "category": "vapaa-aika",
+        "title": "Ystävät ja perhe aina läsnä pilvessä ",
+        "short_desc": "Janette Knaapin ystävät ovat liikkeessä koko ajan. Tärkeät ihmiset ovat kuitenkin läsnä jokapäiväisessäelämässä pilvipalvelujen avulla. ",
+        "images": [
+            "img/article-img2.jpg"
+        ] ,
+         "featured_stat":false,
+         "featured_img": [
+             "img/featured-img-2.jpg"
+         ]
+
+    },
+    {
+        "id":"3",
+        "category": "koti",
+        "title": "Saunatohtori Oy avaa uuden saunastudion",
+        "short_desc": "Märkätiloihin erikoistunut yritys panostaa vahvasti asiakaslähtöisen palvelukonseptin luomiseen.",
+        "images": [
+            "img/article-img3.jpg"
+        ] ,
+        "featured_stat":true,
+        "featured_img": [
+            "img/featured-img-3.jpg"
+        ]
+    }
+
+]
